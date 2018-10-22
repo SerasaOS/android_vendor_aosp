@@ -30,13 +30,14 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) $(SHA256) $(MORBID_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(MORBID_TARGET_PACKAGE).sha256sum
 	@echo -e ${CL_PRP}""${CL_PRP}
 	@echo -e ${CL_PRP}""${CL_PRP}
-	@echo -e ${CL_PRP}"    __  _______  ____  ____  ________ "${CL_PRP}
-	@echo -e ${CL_PRP}"   /  |/  / __ \/ __ \/ __ )/  _/ __ \"${CL_PRP}
-	@echo -e ${CL_PRP}"  / /|_/ / / / / /_/ / __  |/ // / / /"${CL_PRP}
-	@echo -e ${CL_PRP}" / /  / / /_/ / _, _/ /_/ // // /_/ / "${CL_PRP} 
-	@echo -e ${CL_PRP}"/_/  /_/\____/_/ |_/_____/___/_____/  "${CL_PRP}  
+	@echo -e ${CL_PRP}"    __  _______  ____  ____  ________  "${CL_PRP}
+	@echo -e ${CL_PRP}"   /  |/  / __ \/ __ \/ __ )/  _/ __ \ "${CL_PRP}
+	@echo -e ${CL_PRP}"  / /|_/ / / / / /_/ / __  |/ // / / / "${CL_PRP}
+	@echo -e ${CL_PRP}" / /  / / /_/ / _, _/ /_/ // // /_/ /  "${CL_PRP} 
+	@echo -e ${CL_PRP}"/_/  /_/\____/_/ |_/_____/___/_____/   "${CL_PRP}  
 	@echo -e ${CL_PRP}""${CL_PRP}
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
+	$(hide) ./vendor/morbid/tools/generate_json_build_info.sh $(MORBID_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(MORBID_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(MORBID_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(MORBID_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
