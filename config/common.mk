@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     MorbidWallpaperStub \
     RepainterServicePriv
 
+# Themes
+PRODUCT_PACKAGES += \
+    MorbidBlackTheme
+
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
