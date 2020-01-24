@@ -102,6 +102,10 @@ PRODUCT_COPY_FILES += \
 # Bootanimation
 include vendor/aosp/config/bootanimation.mk
 
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
