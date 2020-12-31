@@ -53,6 +53,7 @@ SOONG_CONFIG_morbidGlobalVars += \
     target_trust_usb_control_enable \
     target_trust_usb_control_disable \
     uses_egl_display_array \
+    uses_miui_camera  \
     uses_nothing_camera \
     uses_oplus_camera \
     camera_needs_client_info_lib 
@@ -90,6 +91,7 @@ SOONG_CONFIG_morbidQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE
 SOONG_CONFIG_morbidQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_morbidGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 SOONG_CONFIG_morbidGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
+SOONG_CONFIG_morbidGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
