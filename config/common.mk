@@ -239,6 +239,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay \
     CustomFontPixelLauncherOverlay \
+    CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay \
     NavigationBarNoHintOverlay \
