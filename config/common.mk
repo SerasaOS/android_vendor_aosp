@@ -217,6 +217,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/MORBID/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
