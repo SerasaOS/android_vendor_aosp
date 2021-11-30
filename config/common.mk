@@ -74,7 +74,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 
 # Fonts
-include vendor/awaken/config/fonts.mk
+include vendor/morbid/config/fonts.mk
 
 # Gboard side padding
 PRODUCT_PRODUCT_PROPERTIES += \
