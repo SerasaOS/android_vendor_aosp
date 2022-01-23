@@ -110,7 +110,8 @@ PRODUCT_PACKAGES += \
 
 # Morbid packages
 PRODUCT_PACKAGES += \
-    MorbidWallpaperStub
+    MorbidWallpaperStub \
+    RepainterServicePriv
 
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
