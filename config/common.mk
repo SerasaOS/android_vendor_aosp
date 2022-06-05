@@ -247,6 +247,10 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# Disable remote keyguard animation
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
+
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PRODUCT_PROPERTIES += \
