@@ -187,6 +187,9 @@ PRODUCT_PACKAGES += \
 
 -include vendor/morbid-priv/keys/keys.mk
 
+# Bootanimation
+$(call inherit-product, vendor/morbid/config/bootanimation.mk)
+
 include vendor/morbid/config/branding.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
