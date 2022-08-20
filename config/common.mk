@@ -307,7 +307,7 @@ PRODUCT_COPY_FILES += \
     vendor/morbid/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.livedisplay.xml
 
 # Bootanimation
-$(call inherit-product, vendor/morbid/config/bootanimation.mk)
+include vendor/morbid/config/bootanimation.mk
 
 include vendor/morbid/config/branding.mk
 
