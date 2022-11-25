@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     build-manifest
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # Morbid packages
 PRODUCT_PACKAGES += \
     MorbidWallpaperStub \
