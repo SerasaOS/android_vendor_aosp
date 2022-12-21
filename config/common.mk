@@ -285,6 +285,13 @@ include vendor/morbid/config/branding.mk
 
 include vendor/morbid/certification/config.mk
 
+# Enable ThinLTO Source wide Conditionally.
+ifeq ($(TARGET_BUILD_WITH_LTO),true)
+GLOBAL_THINLTO := true
+USE_THINLTO_CACHE := true
+SKIP_ABI_CHECKS := true
+endif
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/morbid/config/partner_gms.mk
 -include vendor/morbid-priv/keys/keys.mk
