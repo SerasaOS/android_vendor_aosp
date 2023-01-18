@@ -125,13 +125,6 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(CUSTOM_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
-# ewOS packages
-PRODUCT_PACKAGES += \
-    Updater
-
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init/init.custom-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.custom-updater.rc \
-
 # Bootanimation
 include vendor/aosp/config/bootanimation.mk
 
@@ -257,5 +250,8 @@ CUSTOM_LOCALES += \
     fur_IT
 
 include vendor/aosp/config/version.mk
+
+# OTA
+$(call inherit-product, vendor/aosp/config/ota.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
