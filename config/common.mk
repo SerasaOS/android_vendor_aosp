@@ -230,7 +230,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
-    NetworkStackOverlay
+    NetworkStackOverlay \
+    NexusLauncherResOverlay
 
 -include vendor/morbid-priv/keys/keys.mk
 
