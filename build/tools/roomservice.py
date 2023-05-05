@@ -30,7 +30,7 @@ import urllib.parse
 import urllib.request
 
 custom_local_manifest = ".repo/local_manifests/snippets/morbid.xml"
-custom_default_revision = "triton"
+custom_default_revision = "unsub"
 custom_dependencies = "morbid.dependencies"
 org_manifest = "morbid-devices"  # leave empty if org is provided in manifest
 org_display = "morbid-devices"  # needed for displaying
