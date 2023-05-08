@@ -47,6 +47,7 @@ SOONG_CONFIG_morbidGlobalVars += \
     target_health_charging_control_supports_bypass \
     target_health_charging_control_supports_deadline \
     target_health_charging_control_supports_toggle \
+    uses_oppo_camera \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_surfaceflinger_udfps_lib \
@@ -95,6 +96,7 @@ SOONG_CONFIG_morbidGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMER
 SOONG_CONFIG_morbidGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_morbidGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_morbidGlobalVars_sdmcore_has_is_display_hw_available_func := $(TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC)
+SOONG_CONFIG_morbidGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
