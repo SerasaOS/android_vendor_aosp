@@ -36,6 +36,7 @@ SOONG_CONFIG_morbidGlobalVars += \
     disable_bluetooth_le_set_host_feature \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
+    include_miui_camera \
     target_health_charging_control_charging_path \
     target_health_charging_control_charging_enabled \
     target_health_charging_control_charging_disabled \
@@ -82,6 +83,7 @@ SOONG_CONFIG_morbidNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK
 SOONG_CONFIG_morbidQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_morbidQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_morbidQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
+SOONG_CONFIG_morbidGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
