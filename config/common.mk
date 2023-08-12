@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 # Certification
 $(call inherit-product-if-exists, vendor/certification/config.mk)
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+    
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images \
