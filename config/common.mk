@@ -202,6 +202,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/%/libfuse-lite.so \
     system/%/libntfs-3g.so
 
+## neofetch
+PRODUCT_COPY_FILES += \
+    vendor/morbid/tools/neofetch:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/neofetch
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
