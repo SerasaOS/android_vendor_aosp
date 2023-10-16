@@ -262,6 +262,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/MORBID/overlay \
     vendor/MORBID/overlay/no-rro
 
+# Protobuf - Workaround for prebuilt Qualcomm HAL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/MORBID/overlay/common \
     vendor/MORBID/overlay/no-rro
