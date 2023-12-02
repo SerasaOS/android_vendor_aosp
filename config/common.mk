@@ -293,6 +293,9 @@ USE_THINLTO_CACHE := true
 SKIP_ABI_CHECKS := true
 endif
 
+PRODUCT_COPY_FILES += \
+    vendor/morbid/overlay/rro_packages/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
+    
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/morbid/config/partner_gms.mk
 -include vendor/morbid-priv/keys/keys.mk
