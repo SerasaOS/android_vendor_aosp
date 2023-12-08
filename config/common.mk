@@ -259,22 +259,19 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/MORBID/overlay/no-rro
 
 PRODUCT_PACKAGES += \
-    CertifiedPropsOverlay \
     CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
     ImmersiveNavigationOverlay \
     NetworkStackOverlay \
     NexusLauncherResOverlay
 
--include vendor/morbid-priv/keys/keys.mk
-
 # Bootanimation
 $(call inherit-product, vendor/morbid/config/bootanimation.mk)
 
 include vendor/morbid/config/branding.mk
 
-PRODUCT_COPY_FILES += \
-    vendor/morbid/config/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
+include vendor/morbid/certification/config.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/morbid/config/partner_gms.mk
+-include vendor/morbid-priv/keys/keys.mk
