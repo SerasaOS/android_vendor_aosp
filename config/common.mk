@@ -141,8 +141,7 @@ PRODUCT_PACKAGES += \
 
 # Morbid packages
 PRODUCT_PACKAGES += \
-    MorbidWallpaperStub \
-    RepainterServicePriv
+    MorbidWallpaperStub 
 
 # TextClassifier
 PRODUCT_PACKAGES += \
