@@ -269,12 +269,15 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     NexusLauncherResOverlay
 
-# Lineage Hardware
+# LineageHW permission
 PRODUCT_COPY_FILES += \
-    vendor/morbid/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml \
+    vendor/morbid/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
+# Permissions for lineage sdk services
+PRODUCT_COPY_FILES += \
     vendor/morbid/config/permissions/org.lineageos.health.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.health.xml \
-	vendor/morbid/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.livedisplay.xml
-	
+    vendor/morbid/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.livedisplay.xml
+
 # Bootanimation
 $(call inherit-product, vendor/morbid/config/bootanimation.mk)
 
