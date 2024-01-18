@@ -446,4 +446,18 @@
         <font weight="900" style="italic">HarmonyOS-Sans-BlackItalic.ttf</font>
     </family>
     <alias name="harmonyos-sans-medium" to="harmonyos-sans" weight="500"/>
+    
+    <family customizationType="new-named-family" name="fucek">
+        <font weight="400" style="normal">Fucek.ttf</font>
+    </family>
+    <alias name="fucek-semi-bold" to="fucek" weight="600" />
+    <alias name="fucek-bold" to="fucek" weight="700" />
+    <alias name="times" to="fucek" />
+    <alias name="times new roman" to="fucek" />
+    <alias name="palatino" to="fucek" />
+    <alias name="georgia" to="fucek" />
+    <alias name="baskerville" to="fucek" />
+    <alias name="goudy" to="fucek" />
+    <alias name="fantasy" to="fucek" />
+    <alias name="ITC Stone Serif" to="fucek" />
 </fonts-modification>
