@@ -493,5 +493,9 @@
     <string-array name="configs_base_soft">
         <!-- Use new privacy indicators for location -->
         <item>privacy/location_indicators_enabled=true</item>
+
+        <!-- Media Provider -->
+        <item>mediaprovider/cloud_media_feature_enabled=true</item>
+        <item>mediaprovider/cloud_media_enforce_provider_allowlist=false</item>
     </string-array>
 </resources>
