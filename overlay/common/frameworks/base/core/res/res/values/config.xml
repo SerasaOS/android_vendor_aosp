@@ -294,8 +294,11 @@
         <item>launcher/ENABLE_SETTINGS_OSE_CUSTOMIZATIONS=true</item> 
         <item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE=true</item> 
         <item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE_MPR=true</item> 
+        <item>launcher/ENABLE_SETTINGS_OSE_CUSTOMIZATIONS=true</item>
         <item>launcher/INVOKE_OMNI_LPH=true</item> 
         <item>launcher/INVOKE_OMNI_LPH_MPR=true</item> 
+        <item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
+        <item>launcher/LPNH_TIMEOUT_MS=400</item>
         
         <!-- Enable the new and advanced Privacy Hub -->
         <item>privacy/safety_center_is_enabled=true</item>
