@@ -58,7 +58,8 @@ SOONG_CONFIG_morbidGlobalVars += \
     uses_miui_camera  \
     uses_nothing_camera \
     uses_oplus_camera \
-    camera_needs_client_info_lib 
+    camera_needs_client_info_lib \
+    target_camera_package_name
 
 SOONG_CONFIG_NAMESPACES += morbidNvidiaVars
 SOONG_CONFIG_morbidNvidiaVars += \
@@ -97,6 +98,7 @@ SOONG_CONFIG_morbidGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_morbidGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_morbidGlobalVars_sdmcore_has_is_display_hw_available_func := $(TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC)
 SOONG_CONFIG_morbidGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
+SOONG_CONFIG_morbidGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
