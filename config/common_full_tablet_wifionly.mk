@@ -7,6 +7,10 @@ $(call inherit-product, vendor/morbid/config/common_full.mk)
 PRODUCT_PACKAGES += \
     LatinIME
 
+# Settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.settings.large_screen_opt.enabled=true
+
 # Include Morbid LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/morbid/overlay/dictionaries
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/morbid/overlay/dictionaries
