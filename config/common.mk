@@ -105,9 +105,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
-# Fonts
-include vendor/morbid/config/fonts.mk
-
 # Gboard side padding
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_l=4 \
@@ -139,9 +136,9 @@ TARGET_SCREEN_HEIGHT ?= 1920
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
-# Build Manifest
+# TouchGestures
 PRODUCT_PACKAGES += \
-    build-manifest
+    TouchGestures
 
 # BtHelper
 PRODUCT_PACKAGES += \
@@ -299,8 +296,11 @@ $(call inherit-product, vendor/morbid/config/bootanimation.mk)
 
 include vendor/morbid/config/branding.mk
 
-#Certification
-$(call inherit-product-if-exists, vendor/certification/config.mk)
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
+
+# Certification
+include vendor/certification/BoardConfig.mk
 
 # Enable ThinLTO Source wide Conditionally.
 ifeq ($(TARGET_BUILD_WITH_LTO),true)

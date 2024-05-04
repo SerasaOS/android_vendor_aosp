@@ -7,10 +7,6 @@ PRODUCT_SIZE := full
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
-# Apps
-PRODUCT_PACKAGES += \
-    Recorder
-
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
     Aperture
