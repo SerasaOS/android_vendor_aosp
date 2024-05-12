@@ -25,7 +25,7 @@
         <item>com.google.android.gms</item> <!--­ Required by Play -->
         <item>com.google.android.contacts</item> <!--­ Google Contacts­ -->
         <item>com.google.android.googlequicksearchbox</item> <!--­ Google Launcher -->
-        <item>com.google.android.launcher</item> <!--­ Google Launcher -->
+        <item>com.google.android.apps.nexuslauncher</item> <!--­ Google Launcher -->
         <item>com.google.android.dialer</item> <!--­ Google dialer to enable making phone calls -->
         <item>com.google.android.apps.messaging</item> <!-- Google messaging to enable text messaging -->
         <item>com.google.android.setupwizard</item> <!-- Google SetupWizard -->
