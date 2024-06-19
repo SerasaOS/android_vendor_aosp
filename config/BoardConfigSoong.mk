@@ -40,6 +40,7 @@ SOONG_CONFIG_morbidGlobalVars += \
     include_miui_camera \
     needs_camera_boottime \
     sdmcore_has_is_display_hw_available_func \
+    gralloc_handle_has_ubwcp_format \
     target_health_charging_control_charging_path \
     target_health_charging_control_charging_enabled \
     target_health_charging_control_charging_disabled \
