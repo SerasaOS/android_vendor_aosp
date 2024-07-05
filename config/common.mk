@@ -270,4 +270,7 @@ include vendor/aosp/config/version.mk
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
 
+# Optimisation
+$(call inherit-product, vendor/aosp/config/common/optimisation.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
