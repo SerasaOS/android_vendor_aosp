@@ -85,14 +85,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
-# Gapps
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+# Google Apps
+$(call inherit-product, vendor/google/gms/products/gms.mk)
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
-
-PRODUCT_PACKAGES += \
-    FaceUnlockOverlay
 
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
@@ -144,9 +141,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BtHelper
 
-# Morbid packages
 PRODUCT_PACKAGES += \
-    MorbidWallpaperStub 
+    BatteryStatsViewer
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -154,10 +150,6 @@ PRODUCT_PACKAGES += \
     libtextclassifier_annotator_universal_model \
     libtextclassifier_actions_suggestions_universal_model \
     libtextclassifier_lang_id_model
-
-# Themes
-PRODUCT_PACKAGES += \
-    MorbidBlackTheme
 
 # GameSpace
 PRODUCT_PACKAGES += \
@@ -265,12 +257,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
-# Microsoft
-$(call inherit-product, vendor/microsoft/packages.mk)
-
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    vendor/MORBID/overlay \
-    vendor/MORBID/overlay/no-rro
+    vendor/morbid/overlay \
+    vendor/morbid/overlay/no-rro
 
 # Protobuf - Workaround for prebuilt Qualcomm HAL
 PRODUCT_PACKAGES += \
@@ -278,14 +267,33 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
     
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/MORBID/overlay/common \
-    vendor/MORBID/overlay/no-rro
+    vendor/morbid/overlay/common \
+    vendor/morbid/overlay/no-rro
 
 PRODUCT_PACKAGES += \
     ImmersiveNavigationOverlay
-    
-# morbid prebuilts
-$(call inherit-product, vendor/morbid-prebuilts/config.mk)
+
+PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay \
+    DocumentsUIOverlay \
+    DummyCutoutOverlay \
+    NoCutoutOverlay \
+    AOSPASettingsOverlay 
+
+# SystemUI Customisation
+PRODUCT_PACKAGES += \
+    SystemUICustomOverlay
+
+# Settings Customisation
+PRODUCT_PACKAGES += \
+    SettingsCustomOverlay
+
+# SettingsProvider Customisation
+PRODUCT_PACKAGES += \
+    SettingsProviderOverlay
+
+PRODUCT_PACKAGES += \
+    SystemUIFlagFlipper
 
 # LineageHW permission
 PRODUCT_COPY_FILES += \
@@ -315,8 +323,11 @@ SKIP_ABI_CHECKS := true
 endif
 
 PRODUCT_COPY_FILES += \
-    vendor/morbid/overlay/rro_packages/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
+    vendor/morbid/rro_overlays/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
     
+# Vendor configurations
+$(call inherit-product, vendor/custom/config.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/morbid/config/partner_gms.mk
 -include vendor/morbid-priv/keys/keys.mk

@@ -19,13 +19,7 @@
 <resources>
     <bool name="def_wifi_on">true</bool>
 
-    <bool name="def_screen_brightness_automatic_mode">true</bool>
-
-    <!-- Default setting for Settings.Global.MOBILE_DATA_ALWAYS_ON -->
-    <bool name="def_mobile_data_always_on">false</bool>
-
-    <!-- Default for Settings.Secure.ONE_HANDED_MODE_ENABLED -->
-    <bool name="def_one_handed_mode_enabled">true</bool>
+    <string name="def_backup_transport">com.stevesoltys.seedvault.transport.ConfigurableBackupTransport</string>
 
     <!-- Initial value for the Settings.Secure.IMMERSIVE_MODE_CONFIRMATIONS setting,
          which is a comma separated list of packages that no longer need confirmation
@@ -35,13 +29,4 @@
 
     <!-- This is disabled by default, but turned on in SetupWizard -->
     <bool name="assisted_gps_enabled">false</bool>
-
-    <!-- Bluetooth -->
-    <bool name="def_bluetooth_on">false</bool>
-
-    <!-- UI touch sounds -->
-    <bool name="def_sound_effects_enabled">false</bool>
-
-    <!-- Wireless Display -->
-    <bool name="def_wifi_display_on">true</bool>
 </resources>
