@@ -338,6 +338,9 @@ $(call inherit-product, vendor/custom/config.mk)
 # Optimisation
 $(call inherit-product, vendor/morbid/config/common/optimisation.mk)
 
+# Microsoft
+$(call inherit-product-if-exists, vendor/microsoft/mms/products/mms.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/morbid/config/partner_gms.mk
 -include vendor/morbid-priv/keys/keys.mk
