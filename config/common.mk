@@ -320,7 +320,7 @@ include vendor/morbid/config/branding.mk
 include packages/overlays/Themes/themes.mk
 
 # Certification
-include vendor/certification/BoardConfig.mk
+$(call inherit-product-if-exists, vendor/certification/config.mk)
 
 # Enable ThinLTO Source wide Conditionally.
 ifeq ($(TARGET_BUILD_WITH_LTO),true)
