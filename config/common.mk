@@ -257,6 +257,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/morbid/overlay \
     vendor/morbid/overlay/no-rro
 
+# Cache clenaer
+PRODUCT_PACKAGES += \
+    init.cache_cleaner.rc \
+    init.cache_cleaner.sh
+    
 # Protobuf - Workaround for prebuilt Qualcomm HAL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
