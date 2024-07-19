@@ -104,6 +104,7 @@ SOONG_CONFIG_morbidGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAM
 SOONG_CONFIG_morbidGlobalVars_sdmcore_has_is_display_hw_available_func := $(TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC)
 SOONG_CONFIG_morbidGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_morbidGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
+SOONG_CONFIG_morbidGlobalVars_spoof_first_api_level_32 := $(SPOOF_FIRST_API_LEVEL_32)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
