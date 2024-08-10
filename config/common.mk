@@ -2,7 +2,12 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Google Apps
-$(call inherit-product, vendor/gms/products/gms.mk)
+WITH_GAPPS ?= true
+ifeq ($(WITH_GAPPS), true)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+else
+include vendor/aosp/config/vanilla.mk
+endif
 
 PRODUCT_BRAND ?= ewOS
 
