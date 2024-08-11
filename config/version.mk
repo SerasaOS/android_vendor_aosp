@@ -12,6 +12,8 @@ CUSTOM_PLATFORM_VERSION := 14.0
 CUSTOM_VERSION := ewOS_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BASE_VERSION)-$(CUSTOM_BUILD_DATE)
 CUSTOM_VERSION_PROP := fourteen
 
+CUSTOM_MAINTAINER_LINK ?= https://t.me/wzrdgrp
+
 # Signing
 ifneq (eng,$(TARGET_BUILD_VARIANT))
 ifneq (,$(wildcard vendor/aosp/signing/keys/releasekey.pk8))

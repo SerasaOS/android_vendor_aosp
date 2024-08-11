@@ -11,7 +11,8 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.custom.fingerprint=$(ROM_FINGERPRINT) \
     ro.custom.version=$(CUSTOM_VERSION) \
     ro.modversion=$(CUSTOM_VERSION) \
-    ro.edoubleu.maintainer=$(CUSTOM_MAINTAINER)
+    ro.edoubleu.maintainer=$(CUSTOM_MAINTAINER) \
+    ro.edoubleu.maintainer_link=$(CUSTOM_MAINTAINER_LINK)
 
 # Updater
 ifeq ($(IS_OFFICIAL),true)
