@@ -11,11 +11,14 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.custom.fingerprint=$(ROM_FINGERPRINT) \
     ro.custom.version=$(CUSTOM_VERSION) \
     ro.modversion=$(CUSTOM_VERSION) \
-    ro.edoubleu.maintainer=$(CUSTOM_MAINTAINER)
+    ro.custom.maintainer=$(CUSTOM_MAINTAINER) \
+    org.custom.build_version=$(CUSTOM_BUILD_VERSION) \
+    org.custom.build_type=$(CUSTOM_BUILD_TYPE) \
+    org.custom.version.display=$(CUSTOM_VERSION)
 
 # Updater
 ifeq ($(IS_OFFICIAL),true)
     ADDITIONAL_SYSTEM_PROPERTIES  += \
-        ro.edoubleu.build_type=ci \
-        ro.edoubleu.version=$(CUSTOM_VERSION_PROP)
+        ro.custom.build_type=ci \
+        ro.custom.version=$(CUSTOM_VERSION_PROP)
 endif
