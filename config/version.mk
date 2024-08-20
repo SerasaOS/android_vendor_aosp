@@ -1,6 +1,6 @@
 # Type of Build
-CUSTOM_BUILD_TYPE ?= COMMUNITY
-CUSTOM_BUILD_VERSION := Unstoppable
+CUSTOM_BUILD_TYPE ?= Community
+CUSTOM_BUILD_VERSION := Unsub
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)

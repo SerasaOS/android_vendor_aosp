@@ -26,23 +26,10 @@ bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).sha256sum
 	$(hide) $(MD5) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).md5sum
-	@echo -e ""
-	@echo -e ${CL_YLW}" ▓█████  █     █░▓█████▓██   ██▓ ▄▄▄       ███▄    █    "${CL_YLW}
-	@echo -e ${CL_YLW}" ▓█   ▀ ▓█░ █ ░█░▓█   ▀ ▒██  ██▒▒████▄     ██ ▀█   █    "${CL_YLW}
-	@echo -e ${CL_YLW}" ▒███   ▒█░ █ ░█ ▒███    ▒██ ██░▒██  ▀█▄  ▓██  ▀█ ██▒   "${CL_YLW}
-	@echo -e ${CL_YLW}" ▒▓█  ▄ ░█░ █ ░█ ▒▓█  ▄  ░ ▐██▓░░██▄▄▄▄██ ▓██▒  ▐▌██▒   "${CL_YLW}
-	@echo -e ${CL_YLW}" ░▒████▒░░██▒██▓ ░▒████▒ ░ ██▒▓░ ▓█   ▓██▒▒██░   ▓██░   "${CL_YLW}
-	@echo -e ${CL_YLW}" ░░ ▒░ ░░ ▓░▒ ▒  ░░ ▒░ ░  ██▒▒▒  ▒▒   ▓▒█░░ ▒░   ▒ ▒    "${CL_YLW}
- 	@echo -e ${CL_YLW}"  ░ ░  ░  ▒ ░ ░   ░ ░  ░▓██ ░▒░   ▒   ▒▒ ░░ ░░   ░ ▒░   "${CL_YLW}
-   	@echo -e ${CL_YLW}" ░     ░   ░     ░   ▒ ▒ ░░    ░   ▒      ░   ░ ░       "${CL_YLW}
-   	@echo -e ${CL_YLW}" ░  ░    ░       ░  ░░ ░           ░  ░         ░       "${CL_YLW}
-	@echo -e ${CL_YLW}"                        ░ ░                             "${CL_YLW}
-	@echo -e ""
-	@echo -e ${CL_YLW}"===========-Package Completed-==========="${CL_YLW}
-	@echo -e ""
-	@echo -e ${CL_CYN}"Zip: "${CL_YLW} $(CUSTOM_TARGET_PACKAGE)${CL_RST}
-	@echo -e ${CL_CYN}$"MD5: "${CL_YLW}" `cat $(CUSTOM_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1` "${CL_RST}
-	@echo -e ${CL_CYN}"SHA256: "${CL_YLW}" `sha256sum $(CUSTOM_TARGET_PACKAGE) | cut -d ' ' -f 1` "${CL_RST}
-	@echo -e ${CL_CYN}"Size: "${CL_YLW}" `ls -l $(CUSTOM_TARGET_PACKAGE) | cut -d ' ' -f 5` "${CL_RST}
-	@echo -e ${CL_CYN}"===========-----Enjoys :)-----==========="${CL_RST}
-	@echo -e ""
+	echo -e ${CL_BLD}${CL_CYN}"===============================-Package complete-==============================="${CL_CYN}
+	echo -e ${CL_BLD}${CL_CYN}"Datetime :"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Size:"${CL_PRP}" `du -sh $(CUSTOM_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Filehash: "${CL_PRP}" `md5sum $(CUSTOM_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Filename: "${CL_PRP} $(CUSTOM_TARGET_PACKAGE)${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"ID: "${CL_PRP}" `cat $(CUSTOM_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"================================================================================"${CL_CYN}
