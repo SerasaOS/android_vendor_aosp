@@ -1,15 +1,11 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common.mk)
+# Inherit common Morbid stuff
+$(call inherit-product, vendor/morbid/config/common.mk)
 
-# Inherit Lineage atv device tree
-$(call inherit-product, device/lineage/atv/lineage_atv.mk)
+# Inherit Morbid atv device tree
+$(call inherit-product, device/morbid/atv/morbid_atv.mk)
 
 # AOSP packages
 PRODUCT_PACKAGES += \
     LeanbackIME
 
-# Lineage packages
-PRODUCT_PACKAGES += \
-    LineageCustomizer
-
-PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/tv
+PRODUCT_PACKAGE_OVERLAYS += vendor/morbid/overlay/tv
