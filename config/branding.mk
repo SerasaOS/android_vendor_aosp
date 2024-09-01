@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-MORBID_CODENAME := Unsub
-MORBID_NUM_VER := 1.0
+MORBID_CODENAME := unsub
+MORBID_NUM_VER := v1.0
 
 TARGET_PRODUCT_SHORT := $(subst morbid_,,$(MORBID_BUILD_TYPE))
 
