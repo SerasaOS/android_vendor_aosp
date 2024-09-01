@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
 # GameSpace
 PRODUCT_PACKAGES += \
     GameSpace
-    
+
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
@@ -255,12 +255,12 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     init.cache_cleaner.rc \
     init.cache_cleaner.sh
-    
+
 # Protobuf - Workaround for prebuilt Qualcomm HAL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
-    
+
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/morbid/overlay/common \
     vendor/morbid/overlay/no-rro
@@ -273,7 +273,7 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     DummyCutoutOverlay \
     NoCutoutOverlay \
-    AOSPASettingsOverlay 
+    AOSPASettingsOverlay
 
 # Transparent recents in pixel launcher
 TARGET_USES_BLUR_RECENT ?= true
@@ -326,12 +326,9 @@ endif
 
 PRODUCT_COPY_FILES += \
     vendor/morbid/rro_overlays/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
-    
+
 # Vendor configurations
 $(call inherit-product, vendor/custom/config.mk)
-
-# Optimisation
-$(call inherit-product, vendor/morbid/config/common/optimisation.mk)
 
 # Microsoft
 $(call inherit-product-if-exists, vendor/microsoft/mms/products/mms.mk)
