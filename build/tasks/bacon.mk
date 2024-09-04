@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # MorbidOS OTA update package
 
-MORBID_TARGET_PACKAGE := $(PRODUCT_OUT)/MorbidOS-$(MORBID_VERSION).zip
+MORBID_TARGET_PACKAGE := $(PRODUCT_OUT)/iMORBID-$(MORBID_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
@@ -35,11 +35,8 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_PRP}" / /  / / /_/ / _, _/ /_/ // // /_/ /  "${CL_PRP} 
 	@echo -e ${CL_PRP}"/_/  /_/\____/_/ |_/_____/___/_____/   "${CL_PRP}  
 	@echo -e ${CL_PRP}""${CL_PRP}
-	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(MORBID_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(MORBID_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(MORBID_TARGET_PACKAGE).sha256sum
-	$(hide) ./vendor/morbid/tools/generate_json_build_info.sh $(MORBID_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_CYN}"===============================-Package complete-==============================="${CL_CYN}
+	$(hide) ./vendor/morbid/tools/generate_json_build_info.sh $(MORBID_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_CYN}"Datetime :"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"Size:"${CL_PRP}" `du -sh $(MORBID_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"Filehash: "${CL_PRP}" `md5sum $(MORBID_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
